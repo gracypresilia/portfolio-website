@@ -2288,3 +2288,54 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 2em 0;
+  padding-left: 2em; }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 1em;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #f56a6a; }
+  
+  .timeline-dot {
+    position: absolute;
+    left: -0.1em;
+    top: 0.5em;
+    width: 12px;
+    height: 12px;
+    background: var(--accent, #f56a6a);
+    border-radius: 50%; }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 1em; }
+    .timeline-item .date {
+      font-size: 0.9em;
+      color: #9fa3a6;
+      margin: 0.2em 0 0.6em; }
+    .timeline-item .content {
+      padding: 0.5em 1em; 
+      border-left: 3px solid transparent;
+      transition: all 0.3s ease; }
+      .timeline-item .content .header {
+        margin-left: 0.5em; 
+        margin-bottom: 0.5em; }
+      .timeline-item .content .main {
+        margin-left: 2em;}
+      .timeline-item .content h3 {
+        margin: 0;
+        font-weight: 600; }
+      .timeline-item .content:hover {
+        border-left: 3px solid var(--accent, #f56a6a);
+        background: #ffefef; }
+
+@media (max-width: 736px){
+  .timeline::before { left:0.6rem; }
+  .timeline-item { padding-left: 1.6rem; }
+  .timeline-item::before { left:0.1rem; }
+}
