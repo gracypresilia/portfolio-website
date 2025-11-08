@@ -1186,6 +1186,30 @@ input[type="radio"] + label:before {
     border-radius: 0;
     padding: 0; }
 
+.box-label {
+  display: inline-block;
+  background-color: #f56a6a;
+  border-radius: 2em;
+  box-shadow: inset 0 0 0 1px #f56a6a;  /* garis merah */
+  color: #ffffff;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  padding: 0.75em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: default;
+  user-select: none;
+}
+
+@media (max-width: 736px){
+  .box-label { margin-bottom:0.35rem; }
+}
+
+
 /* Icon */
 .icon {
   text-decoration: none;
@@ -2321,21 +2345,50 @@ button,
     .timeline-item .content {
       padding: 0.5em 1em; 
       border-left: 3px solid transparent;
-      transition: all 0.3s ease; }
+      transition: all 0.3s ease; 
+      position: relative; }
       .timeline-item .content .header {
         margin-left: 0.5em; 
-        margin-bottom: 0.5em; }
+        margin-bottom: 0.5em; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
       .timeline-item .content .main {
-        margin-left: 2em;}
+        margin: 0 0 0.5em 2em; }
+        .timeline-item .content .main ul {
+          margin-bottom: 1em; }
+      .timeline-item .content .subcontent {
+        margin: 0 0 0.5em 1.5em; }
+        .timeline-item .content .subcontent .text {
+          margin: 0 0 0 2em; }
+        .timeline-item .content .subcontent h4 {
+          margin: 0 0 0.35em 0; 
+          font-weight: 600; }
+        .timeline-item .content .subcontent ul {
+          margin-bottom: 1em; }
+      .timeline-item .content .button {
+          position: absolute;
+          top: 50%;                
+          right: 2em;              
+          transform: translateY(-50%); }
       .timeline-item .content h3 {
         margin: 0;
         font-weight: 600; }
       .timeline-item .content:hover {
         border-left: 3px solid var(--accent, #f56a6a);
-        background: #ffefef; }
+        background: rgba(245, 106, 106, 0.05); }
 
 @media (max-width: 736px){
   .timeline::before { left:0.6rem; }
   .timeline-item { padding-left: 1.6rem; }
   .timeline-item::before { left:0.1rem; }
+
+  .timeline-item .content .button {
+    position: static;              
+    display: block;                
+    margin: 1em auto 2em 1em;       
+    transform: none;               
+    right: auto;                   
+    top: auto;                     
+  }
 }
