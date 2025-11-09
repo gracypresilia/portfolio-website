@@ -1280,6 +1280,10 @@ input[type="radio"] + label:before {
       margin-top: 0.6em;
       font-style: italic; }
 
+@media (max-width: 736px){
+  .image.main .crop {height: 30vh;}
+}
+
 a.image {
   overflow: hidden; }
   a.image img {
@@ -2403,7 +2407,7 @@ button,
 
 @media (max-width: 736px){
   .timeline::before { left:0.6rem; }
-  .timeline-item { padding-left: 1.6rem; }
+  .timeline-item { padding-left: 0.3rem; }
   .timeline-item::before { left:0.1rem; }
 
   .timeline-item .content .button {
