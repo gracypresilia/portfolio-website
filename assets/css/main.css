@@ -1205,7 +1205,7 @@ input[type="radio"] + label:before {
   user-select: none;
 }
 
-@media (max-width: 736px){
+@media screen and (max-width: 736px){
   .box-label { margin-bottom:0.35rem; }
 }
 
@@ -1280,7 +1280,7 @@ input[type="radio"] + label:before {
       margin-top: 0.6em;
       font-style: italic; }
 
-@media (max-width: 736px){
+@media screen and (max-width: 736px){
   .image.main .crop {height: 30vh;}
 }
 
@@ -2405,7 +2405,7 @@ button,
         border-left: 3px solid var(--accent, #274A80);
         background: #EFF7F9; }
 
-@media (max-width: 736px){
+@media screen and (max-width: 736px){
   .timeline::before { left:0.6rem; }
   .timeline-item { padding-left: 0.3rem; }
   .timeline-item::before { left:0.1rem; }
