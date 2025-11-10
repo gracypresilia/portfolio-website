@@ -1198,17 +1198,13 @@ input[type="radio"] + label:before {
   text-transform: uppercase;
   letter-spacing: 0.075em;
   padding: 0.75em 1.5em;
+  margin-bottom:0.35rem;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
   cursor: default;
   user-select: none;
 }
-
-@media screen and (max-width: 736px){
-  .box-label { margin-bottom:0.35rem; }
-}
-
 
 /* Icon */
 .icon {
